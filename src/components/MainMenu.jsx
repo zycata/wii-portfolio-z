@@ -1,12 +1,12 @@
-import EmptyChannel from "./EmptyChannel";
-import DiscChannel from "./DiscChannel";
-import BannerChannel from "./BannerChannel";
+import EmptyChannel from "./Channels/EmptyChannel";
+import DiscChannel from "./Channels/DiscChannel";
+import BannerChannel from "./Channels/BannerChannel";
 import githubSvg from "../assets/svgs/github.svg";
 import linkedinSvg from "../assets/svgs/linkedin.svg";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import CodeChannel from "./CodeChannel";
-import TechnologiesChannel from "./TechnologiesChannel";
+import CodeChannel from "./Channels/CodeChannel";
+import TechnologiesChannel from "./Channels/TechnologiesChannel";
 import starSvg from "../assets/svgs/star.svg";
 import MmFooter from "./MmFooter";
 import MmFooterMobile from "./MmFooterMobile";

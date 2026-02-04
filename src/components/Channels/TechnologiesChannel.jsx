@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import reactIcon from "../assets/svgs/react.svg";
-import javaIcon from "../assets/svgs/java.svg";
-import pythonIcon from "../assets/svgs/python.svg";
-import springIcon from "../assets/svgs/spring.svg";
-import javascriptIcon from "../assets/svgs/js.svg";
+import reactIcon from "../../assets/svgs/react.svg";
+import javaIcon from "../../assets/svgs/java.svg";
+import pythonIcon from "../../assets/svgs/python.svg";
+import springIcon from "../../assets/svgs/spring.svg";
+import javascriptIcon from "../../assets/svgs/js.svg";
 
 const TechnologiesChannel = () => {
     const [showTooltip, setShowTooltip] = useState(false);

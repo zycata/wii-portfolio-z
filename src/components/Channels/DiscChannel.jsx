@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import { RiDiscFill } from "react-icons/ri";
 import { useMediaQuery } from "react-responsive";
-import avatar from "../assets/svgs/avatar.svg";
+import avatar from "../../assets/svgs/avatar.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

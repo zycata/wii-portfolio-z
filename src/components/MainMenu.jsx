@@ -1,6 +1,7 @@
 import EmptyChannel from "./Channels/EmptyChannel";
 import DiscChannel from "./Channels/DiscChannel";
 import BannerChannel from "./Channels/BannerChannel";
+import DinosaurChannel from "./Channels/DinosaurChannel";
 import githubSvg from "../assets/svgs/github.svg";
 import linkedinSvg from "../assets/svgs/linkedin.svg";
 import { Link } from "react-router-dom";
@@ -90,11 +91,18 @@ export default function MainMenu() {
                     >
                         <CodeChannel />
                     </Link>
+                    {/*uhh todo actually make a dinosaur page like actually do this please*/}
+                    <Link
+                        to={"https://chromedino.com/"}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="md:w-1/4 md:p-[0.4vh]"
+                    >
+                        <DinosaurChannel />
+                    </Link>
                     {isMdOrLarger && (
                         <>
-                            <div className="md:w-1/4 md:p-[0.4vh]">
-                                <EmptyChannel />
-                            </div>
+                        
                             <div className="md:w-1/4 md:p-[0.4vh]">
                                 <EmptyChannel />
                             </div>

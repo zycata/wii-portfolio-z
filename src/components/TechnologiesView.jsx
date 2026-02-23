@@ -25,8 +25,8 @@ const TechnologiesView = () => {
 
     useEffect(() => {
         const steps = 21;
-        const interval = 300;
-        const displayTime = 1000;
+        const interval = 200;
+        const displayTime = 2000;
 
         const intervalId = setInterval(
             () => {

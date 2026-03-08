@@ -9,14 +9,14 @@ const WorkExperienceView = () => {
     const experienceRefs = useRef([]);
     const [hoveredItem, setHoveredItem] = useState(null);
 
-    const workExperiences = [
+    const projectExperience = [
         {
             id: 1,
-            year: "Feb 25 - Present",
-            company: "ASF",
-            position: "Full Stack Developer",
+            year: "2025 March - August",
+            company: "BTD6 Machine",
+            position: "C++, C#, make",
             description:
-                "Development of a management system for a multinational oil & gas company using React, Material UI, Java Spring Boot, and Oracle DB. Created interactive visualizations and contributed to frontend and backend tasks.",
+                "Created a genetic algorithm using C++ to create an program that could play the desktop computer game bloons tower defense 6",
             color: "bg-green-600",
         },
         {
@@ -46,6 +46,7 @@ const WorkExperienceView = () => {
                 "Collaborated with clients to define functional requirements. Wrote user stories in Jira and created flow diagrams to support the development of a custom software product.",
             color: "bg-purple-600",
         },
+        
     ];
 
     useGSAP(() => {
@@ -82,11 +83,12 @@ const WorkExperienceView = () => {
             {/* Título */}
             <div className="text-center py-8">
                 <h1 className="font-serif font-bold text-4xl md:text-6xl text-amber-900">
-                    Professional Experience
+                    Projects Timeline
                 </h1>
             </div>
 
-            {/* Línea de tiempo horizontal */}
+            {/* Línea de tiempo horizontal 
+            also probably change this to scroll sections of a project */}
             <div className="flex-grow px-4 pb-44 md:pb-0">
                 <div className="w-full max-w-7xl mx-auto">
                     <div ref={timelineRef} className="relative">
@@ -98,7 +100,7 @@ const WorkExperienceView = () => {
 
                         {/* Contenedor de experiencias */}
                         <div className="flex flex-col md:flex-row justify-between items-start space-y-12 md:space-y-0 md:space-x-4 relative">
-                            {workExperiences.map((exp, index) => (
+                            {projectExperience.map((exp, index) => (
                                 <div
                                     key={exp.id}
                                     ref={(el) => experienceRefs.current[index] = el}

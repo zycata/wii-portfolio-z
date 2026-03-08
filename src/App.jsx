@@ -6,6 +6,7 @@ import WarningMenu from "./components/WarningMenu";
 import AboutMe from "./components/AboutMe";
 import TechnologiesView from "./components/TechnologiesView";
 import WorkExperienceView from "./components/WorkExperienceView";
+import ProjectsTimeline from "./components/ProjectsTimelineView";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
             <Route path="/about-me" element={<AboutMe />} />
             <Route path="/technologies-view" element={<TechnologiesView />} />
             <Route path="/work-experience" element={<WorkExperienceView />} />
+            <Route path="/ProjectsTimeline" element={<ProjectsTimeline />} />
         </Routes>
     );
 }

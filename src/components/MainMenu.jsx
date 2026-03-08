@@ -12,7 +12,9 @@ import starSvg from "../assets/svgs/star.svg";
 import MmFooter from "./MmFooter";
 import MmFooterMobile from "./MmFooterMobile";
 import { useMediaQuery } from "react-responsive";
-import WorkExperienceChannel from "./WorkExperienceChannel";
+
+import ProjectsChannel from "./Channels/ProjectsChannel"
+import WorkExperienceChannel from "./Channels/WorkExperienceChannel";
 
 export default function MainMenu() {
     const [fadeIn, setFadeIn] = useState(false);
@@ -34,10 +36,10 @@ export default function MainMenu() {
                         <DiscChannel />
                     </Link>
                     <Link
-                        to={"/work-experience"}
+                        to={"/ProjectsTimeline"}
                         className="md:w-1/4 md:p-[0.4vh]"
                     >
-                        <WorkExperienceChannel />
+                        <ProjectsChannel />
                     </Link>
                     <Link
                         to={"/technologies-view"}

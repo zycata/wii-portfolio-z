@@ -3,7 +3,7 @@ import workIcon from "../../assets/svgs/work-channel.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-const WorkExperienceChannel = () => {
+const ProjectsChannel = () => {
     const [showTooltip, setShowTooltip] = useState(false);
     const [hoverTimeout, setHoverTimeout] = useState(null);
     const workIconRef = useRef();
@@ -49,9 +49,10 @@ const WorkExperienceChannel = () => {
             <div className="bg-amber-200 flex items-center justify-center font-mono rounded-lg w-full h-full overflow-hidden channel-height">
                 <div className="text-7xl">
                     <img
+                        /* TODO: CHANGEICON */
                         ref={workIconRef}
                         src={workIcon}
-                        alt="Work Experience"
+                        alt="Projects "
                         className={`object-cover md:w-[6vw] w-24`}
                     />
                 </div>
@@ -60,11 +61,11 @@ const WorkExperienceChannel = () => {
             {/* Tooltip */}
             {showTooltip && (
                 <div className="font-rodin absolute z-10 left-1/2 transform -translate-x-1/2 mt-2 px-24 py-2 bg-white text-black rounded-full text-xl border-2 border-gray-300 shadow-xl whitespace-nowrap">
-                    <p>Professional experience</p>
+                    <p>Projects</p>
                 </div>
             )}
         </div>
     );
 };
 
-export default WorkExperienceChannel;
+export default ProjectsChannel;

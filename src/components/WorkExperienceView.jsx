@@ -46,6 +46,15 @@ const WorkExperienceView = () => {
                 "Collaborated with clients to define functional requirements. Wrote user stories in Jira and created flow diagrams to support the development of a custom software product.",
             color: "bg-purple-600",
         },
+        {
+            id: 5,
+            year: "Jan 24 - Apr 24",
+            company: "OpenDev Pro",
+            position: "Functional Analyst",
+            description:
+                "Collaborated with clients to define functional requirements. Wrote user stories in Jira and created flow diagrams to support the development of a custom software product.",
+            color: "bg-purple-600",
+        },
     ];
 
     useGSAP(() => {

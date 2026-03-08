@@ -8,45 +8,46 @@ const WorkExperienceView = () => {
     const lineRef = useRef();
     const experienceRefs = useRef([]);
     const [hoveredItem, setHoveredItem] = useState(null);
-
+    const page_title_name = "Featured Projects";
     const projectExperience = [
         {
             id: 1,
-            year: "2025 March - August",
-            company: "BTD6 Machine",
-            position: "C++, C#, make",
-            description:
+            year: "2025 Mar - Aug",
+            name: "BTD6 Machine",
+            technologies: "C++, C#, makefile",
+            description: [
                 "Created a genetic algorithm using C++ to create an program that could play the desktop computer game bloons tower defense 6",
+                "Created a C\# mod using DLL injection to interface with the BTD6 game engine, providing real-time gameplay data to the C++ AI for learning and optimization",
+                "Optimized a decision-making algorithm, reducing the number of generations needed to beat the game by 50\% through refined genetic selection.",
+
+            ],
             color: "bg-green-600",
         },
         {
             id: 2,
-            year: "Feb 25 - Sep 25",
-            company: "Freelance - Terraoliva",
-            position: "Frontend Developer & Project Lead",
-            description:
-                "Led the development of a ticket sales system for an event venue. Defined roadmap and Gantt, negotiated with the client, and built the frontend for both web (React) and mobile (React Native). Coordinated backend development in Ruby on Rails.",
+            year: "2025 Dec - 2026 Jan",
+            name: "C Ascii Generator",
+            technologies: "C, makefile",
+            description: [
+                "Created an image to ascii art generator using C",
+                "Uses image convolution with a sobel edge kernel to generate sharper edges on outputted ascii art",
+                "Added a diverse amount of argument options that include: sobel thresholds, character ratios, brightness, and disk writes"
+
+            ],
             color: "bg-yellow-600",
         },
         {
             id: 3,
-            year: "Oct 24 - Feb 25",
-            company: "Factor IT",
-            position: "Full Stack Developer",
-            description:
-                "Worked on a secured loan system for BBVA using React, Lit, Web Components, and Java Spring Boot. Collaborated with an international team and applied version control with Git.",
+            year: "2026 Jan - Mar",
+            name: "Ubc Workday Converter",
+            technologies: "Flask, Python, React, Docker, Javascript",
+            description: [
+                "Created a website that converts UBC workday excel course schedules into usable and practical icalendar (.ics) files",
+                "Used Python Flask as a backend with a react JSX frontend",
+                "Deployed the website using Google Cloud Service's Cloud run to the public",
+            ],
             color: "bg-blue-600",
         },
-        {
-            id: 4,
-            year: "Jan 24 - Apr 24",
-            company: "OpenDev Pro",
-            position: "Functional Analyst",
-            description:
-                "Collaborated with clients to define functional requirements. Wrote user stories in Jira and created flow diagrams to support the development of a custom software product.",
-            color: "bg-purple-600",
-        },
-        
     ];
 
     useGSAP(() => {
@@ -74,7 +75,7 @@ const WorkExperienceView = () => {
                         });
                     }
                 });
-            }
+            },
         });
     });
 
@@ -83,7 +84,8 @@ const WorkExperienceView = () => {
             {/* Título */}
             <div className="text-center py-8">
                 <h1 className="font-serif font-bold text-4xl md:text-6xl text-amber-900">
-                    Projects Timeline
+                    {/*"is this riyal or fakeh??"*/}
+                    {page_title_name}
                 </h1>
             </div>
 
@@ -93,7 +95,7 @@ const WorkExperienceView = () => {
                 <div className="w-full max-w-7xl mx-auto">
                     <div ref={timelineRef} className="relative">
                         {/* Línea horizontal principal */}
-                        <div 
+                        <div
                             ref={lineRef}
                             className="hidden md:block absolute left-8 right-8 h-2 bg-amber-600 rounded-full shadow-lg z-0 top-16"
                         ></div>
@@ -103,8 +105,10 @@ const WorkExperienceView = () => {
                             {projectExperience.map((exp, index) => (
                                 <div
                                     key={exp.id}
-                                    ref={(el) => experienceRefs.current[index] = el}
-                                    className="relative flex flex-col items-center group w-full md:w-1/4"
+                                    ref={(el) =>
+                                        (experienceRefs.current[index] = el)
+                                    }
+                                    className="relative flex flex-col items-center group w-full max-w-4xl"
                                     onMouseEnter={() => setHoveredItem(exp.id)}
                                     onMouseLeave={() => setHoveredItem(null)}
                                 >
@@ -130,14 +134,18 @@ const WorkExperienceView = () => {
                                     >
                                         <div className="text-center">
                                             <h3 className="font-bold text-lg text-amber-900 mb-1">
-                                                {exp.company}
+                                                {exp.name}
                                             </h3>
                                             <h4 className="font-semibold text-md text-blue-700 mb-3">
-                                                {exp.position}
+                                                {exp.technologies}
                                             </h4>
-                                            <p className="text-sm text-gray-700 leading-relaxed">
-                                                {exp.description}
-                                            </p>
+                                            {exp.description.map(
+                                                (desc, idx) => (
+                                                    <li className="text-sm text-gray-700 leading-relaxed">
+                                                        {desc}
+                                                    </li>
+                                                ),
+                                            )}
                                         </div>
                                     </div>
                                 </div>

@@ -52,7 +52,7 @@ const ProjectsChannel = () => {
                         /* TODO: CHANGEICON */
                         ref={workIconRef}
                         src={workIcon}
-                        alt="Projects "
+                        alt="Featured Projects "
                         className={`object-cover md:w-[6vw] w-24`}
                     />
                 </div>
@@ -61,7 +61,7 @@ const ProjectsChannel = () => {
             {/* Tooltip */}
             {showTooltip && (
                 <div className="font-rodin absolute z-10 left-1/2 transform -translate-x-1/2 mt-2 px-24 py-2 bg-white text-black rounded-full text-xl border-2 border-gray-300 shadow-xl whitespace-nowrap">
-                    <p>Projects</p>
+                    <p>Featured Projects</p>
                 </div>
             )}
         </div>

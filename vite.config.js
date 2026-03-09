@@ -4,6 +4,7 @@ import tailwindcss from "tailwindcss";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: "/wii-portfolio-z",
   plugins: [react()],
   css: {
     postcss: {
